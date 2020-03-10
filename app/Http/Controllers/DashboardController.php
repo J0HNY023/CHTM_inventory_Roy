@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\User;
 use App\Equipment;
+use App\EquipmentCategory;
 use Illuminate\Http\Request;
  
 class DashboardController extends Controller
@@ -16,16 +17,20 @@ class DashboardController extends Controller
 
     public function showEquipments(){
     	$user = User::first();
-    	$equipments = Equipment::all();
+      $equipments = Equipment::all();
+    	$equipment = Equipment::first();
 
-    	return view('equipment.index', compact('user','equipments'));
+      // $ec = EquipmentCategory::all();
+      // dd($equipments);
+
+    	return view('equipment.index', compact('user','equipments','equipment'));
     }
 
     public function createEquipments(){
     	$user = User::first();
     	$equipments = Equipment::all();
-
-    	return view('equipment.create',compact('user','equipments'));
+      $equipment_categories = EquipmentCategory::all();
+    	return view('equipment.create',compact('user','equipments','equipment_categories'));
     }
 
     public function storeEquipments(){
@@ -55,8 +60,9 @@ class DashboardController extends Controller
    public function editEquipments($id){
    		$user = User::first();
     	$equipments = Equipment::find($id);
+      $equipment_categories = EquipmentCategory::all();
 
-		return view('equipment.edit',compact('user','equipments','id'));
+		return view('equipment.edit',compact('user','equipments','id','equipment_categories'));
 
    }
 

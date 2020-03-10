@@ -1,7 +1,7 @@
 
 @extends('layouts.master')
 
-@include('dashboard.index')
+{{-- @include('dashboard.index') --}}
 {{-- {{dd($equipments->date_bought)}} --}}
 
 @section('content')
@@ -29,7 +29,12 @@
 
     <div class="col-auto">
       <label class="sr-only" for="inlineFormInput">Equipment Category Id</label>
-      <input type="number" class="form-control mb-2" id="inlineFormInput" name="equipment_category_id" placeholder="{{$equipments->equipment_category_id}}"  required="required">
+         <select class="form-control mb-2" id="inlineFormInput" name="equipment_category_id"   required="required">
+          @foreach($equipment_categories as $equipment_category)
+          <option value="{{$equipment_category->id}}">{{$equipment_category->name}}</option>
+          @endforeach
+    </select>
+
     </div>
 
     <div class="col-auto">

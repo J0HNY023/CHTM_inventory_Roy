@@ -1,9 +1,18 @@
 
 @extends('layouts.master')
 
-@include('dashboard.index')
 
+{{-- {{dd($equipments[1]->equipment_category)}} --}}
 @section('content')
+
+{{-- @foreach ($equipments->equipment_category as $cat) --}}
+{{-- {{$equipment->equipment_category}} --}}
+{{-- {{$cat}} --}}
+{{-- @endforeach --}}
+
+{{-- {{$equipments[0]->equipment_category->name}} --}}
+
+<h3>Equipments</h3>
 <table class="table">
   <thead>
     <tr>
@@ -15,12 +24,16 @@
     </tr>
   </thead>
   <tbody>
+
+
   	@foreach($equipments as $equipment)
+
+
     <tr>
-      <th scope="row">{{$equipment->serial_number}}</th>
+      <th scope="row">{{$equipment->serial_number}}&nbsp;{{$equipment->id}}</th>
       <td>{{$equipment->brand}}</td>
       <td>{{$equipment->date_bought}}</td>
-      <td>{{$equipment->equipment_category_id}}</td>
+      <td>{{$equipment->equipment_category->name}}</td>
       <td>
       	<a href="/dashboard/equipment/edit/{{$equipment->id}}">Edit</a>
       	<a href="/dashboard/equipment/delete/{{$equipment->id}}">Delete</a>

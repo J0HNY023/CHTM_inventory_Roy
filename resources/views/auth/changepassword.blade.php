@@ -5,7 +5,7 @@
 @extends('layouts.master')
 
 
-@include('dashboard.index')
+{{-- @include('dashboard.index') --}}
 
 @section('content')
 
