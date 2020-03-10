@@ -25,6 +25,11 @@
         <a class="nav-link" href="/dashboard/equipment">Equipments <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
+
+        <li class="nav-item active">
+        <a class="nav-link" href="/dashboard/utensil">Utensil <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
    </ul>
  </div>
 

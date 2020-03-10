@@ -29,6 +29,13 @@ Route::middleware('auth')
 		Route::post('/dashboard/equipment/update', 'DashboardController@updateEquipments');
 
 
+		Route::get('/dashboard/utensil', 'DashboardController@showUtensil');
+		Route::get('/dashboard/utensil/create', 'DashboardController@createUtensil');
+		Route::post('/dashboard/utensil/store', 'DashboardController@storeUtensil');
+		Route::get('/dashboard/utensil/delete/{id}', 'DashboardController@deleteUtensil');
+		Route::get('/dashboard/utensil/edit/{id}', 'DashboardController@editUtensil');
+		Route::post('/dashboard/utensil/update', 'DashboardController@updateUtensil');
+
 		Route::get('/logout', 'LoginController@logout');
 
 		Route::get('/changepassword','LoginController@showChangePasswordForm');

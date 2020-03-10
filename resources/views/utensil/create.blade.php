@@ -2,7 +2,7 @@
 @extends('layouts.master')
 
 {{-- @include('dashboard.index') --}}
-
+{{-- {{dd($utensils)}} --}}
 @section('content')
 {{-- {{dd($utensil_categories)}} --}}
 {{-- asdfasdf --}}
@@ -13,17 +13,17 @@
   <div class="form-row align-items-center">
      <div class="col-auto">
       <label class="sr-only" for="inlineFormInput">Name</label>
-      <input type="text" class="form-control mb-2" id="inlineFormInput"  name="serial_number" placeholder="Serial Number" required="required">
+      <input type="text" class="form-control mb-2" id="inlineFormInput"  name="name" placeholder="Name" required="required">
     </div>
 
     <div class="col-auto">
       <label class="sr-only" for="inlineFormInput">Unit</label>
-      <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Brand" name="brand"  required="required">
+      <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="unit" name="unit"  required="required">
     </div>
 
     <div class="col-auto">
-      <label class="sr-only" for="inlineFormInput">quantity</label>
-      <input type="date" class="form-control mb-2" id="inlineFormInput" name="date_bought"  required="required">
+      <label class="sr-only" for="inlineFormInput">Quantity</label>
+      <input type="number" class="form-control mb-2" id="inlineFormInput" name="quantity"  required="required">
     </div>
 
     <div class="col-auto">
