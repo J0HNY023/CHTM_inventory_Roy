@@ -137,9 +137,9 @@ public function showUtensil(){
    public function updateUtensil(){
 
     Utensil::where('id', request()->id)->update([
-        'serial_number' => request()->serial_number,
-            'brand' =>  request()->brand,
-            'date_bought' =>  request()->date_bought,
+        'name' => request()->name,
+            'unit' =>  request()->unit,
+            'quantity' =>  request()->quantity,
             'utensil_category_id' =>  request()->utensil_category_id
     ]);
 

@@ -18,16 +18,16 @@
 
     <div class="col-auto">
       <label class="sr-only" for="inlineFormInput">Unit</label>
-      <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="unit" name="unit"  required="required">
+      <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Unit" name="unit"  required="required">
     </div>
 
     <div class="col-auto">
       <label class="sr-only" for="inlineFormInput">Quantity</label>
-      <input type="number" class="form-control mb-2" id="inlineFormInput" name="quantity"  required="required">
+      <input type="number" class="form-control mb-2" id="inlineFormInput" placeholder="Quantity" name="quantity"  required="required">
     </div>
 
     <div class="col-auto">
-      <label class="sr-only" for="inlineFormInput">Utensil Category Id</label>
+      <label class="sr-only" for="inlineFormInput">Utensil Category </label>
          <select class="form-control mb-2" id="inlineFormInput" name="utensil_category_id"   required="required">
           @foreach($utensil_categories as $utensil_category)
           <option value="{{$utensil_category->id}}">{{$utensil_category->name}}</option>

@@ -12,14 +12,14 @@
 
 {{-- {{$utensils[0]->utensil_category->name}} --}}
 
-<h3>Equipments</h3>
+<h3>Utensils</h3>
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">Serial #</th>
-      <th scope="col">Brand</th>
-      <th scope="col">Date Bought</th>
-      <th scope="col">Equipment Category Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Unit</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Utensil Category </th>
       <th scope="col">Actions</th>
     </tr>
   </thead>
@@ -30,7 +30,7 @@
 
 
     <tr>
-      <th scope="row">{{$utensil->name}}&nbsp;{{$utensil->id}}</th>
+      <th scope="row">{{$utensil->name}}</th>
       <td>{{$utensil->unit}}</td>
       <td>{{$utensil->quantity}}</td>
       <td>{{$utensil->utensil_category->name}}</td>
